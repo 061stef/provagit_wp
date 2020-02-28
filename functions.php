@@ -667,3 +667,33 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+//Endpoit prova per git
+do_action( 'rest_api_init', 'add_endpoint_path' );
+
+function add_endpoint_path(){
+	$namespace = 'api/v1';
+	register_rest_route($namespace, 'prova', array(
+		'methods' => 'POST',
+		'callback' => 'primo_endpoint_con_git'
+	));
+}
+
+function primo_endpoint_con_git(){
+
+	$args = [
+		'post_type' => 'post',
+		'offset' => -1
+	];
+	$array = get_post($args);
+	$data = [];
+	$i = 0;
+
+	foreach($array as $item){
+		$data[$i]['Id'] = $item->ID;
+		$data[$i]['name'] = $item->post_title; 
+		$i++;
+	}
+	return $data;
+}
