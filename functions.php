@@ -107,7 +107,7 @@ function twentyseventeen_setup() {
 			'width'      => 250,
 			'height'     => 250,
 			'flex-width' => true,
-			
+
 		)
 	);
 
@@ -277,6 +277,7 @@ function twentyseventeen_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'twentyseventeen_content_width', $content_width );
 }
 add_action( 'template_redirect', 'twentyseventeen_content_width', 0 );
+//ciao belli
 
 /**
  * Register custom fonts.
