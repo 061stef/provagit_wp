@@ -691,7 +691,7 @@ function primo_endpoint_con_git(){
 	$i = 0;
 
 	foreach($array as $item){
-		$data[$i]['Id'] = $item->ID;
+		$data[$i]['id'] = $item->ID;
 		$data[$i]['name'] = $item->post_title; 
 		$i++;
 	}
