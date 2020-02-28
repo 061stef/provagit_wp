@@ -544,6 +544,7 @@ function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
 	return $sizes;
 }
 add_filter( 'wp_calculate_image_sizes', 'twentyseventeen_content_image_sizes_attr', 10, 2 );
+//chitammuo azibbbbbbb
 
 /**
  * Filter the `sizes` value in the header image markup.
